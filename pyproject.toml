@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pylack"
+version = "0.0.1"
+authors = [
+  { name="Algorythms Inc", email="algorythmsinc@gmail.com" },
+]
+description = "A small data science and machine learning project development framework"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Algorythms-Inc/pylack"
+"Bug Tracker" = "https://github.com/Algorythms-Inc/pylack/issues"
