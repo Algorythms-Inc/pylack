@@ -1,4 +1,5 @@
 import os
+import sys
 from docx import Document
 from warnings import filterwarnings
 
@@ -6,7 +7,8 @@ filterwarnings("ignore")
 
 
 def root():
-    projectDirectory = input("Enter project name: ")
+    
+    projectDirectory = sys.argv[1]
     try:
         os.mkdir(path=projectDirectory)
         os.chdir(projectDirectory)
