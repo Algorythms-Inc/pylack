@@ -1,3 +1,3 @@
 #!/usr/bin/zsh
 
-echo "Running shell commands"
+echo `man python3`
