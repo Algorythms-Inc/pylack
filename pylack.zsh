@@ -1,25 +1,26 @@
-#!/usr/bin/zsh
+#!/usr/bin/zsh -w
 
+# helper message for exeptions
 __usage="
-USAGE
+    USAGE
 
-pylack <command> [OPTIONS]
+    pylack <command> [OPTIONS]
 
-Options:
-  -h, --help                   Something something something help
-  -v, --version                Something something something version
+    Options:
+    -h, --help                   Something something something help
+    -v, --version                Something something something version
 
-  startproject                 To start a new project.
+    startproject                 To start a new project.
 "
 
-# path to main python executable script
-path = "./pylack/main.py"
-main_script=$(dirname "$path")
+# Replace this with the actual path to your main Python script
+path="pylack/"
 
 # Check if two arguments are provided
 if [ $# -eq 2 ] && [ "$1" = "startproject" ]; then
     project_name="$2"
-    activate=$(python3 $main_script "$project_name")
+    cd "$(dirname "$path")"
+    activate=`python3 "$path" "$project_name"`
     echo "$activate"
 else
     echo "$__usage"
