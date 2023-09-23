@@ -1,4 +1,5 @@
 import os
+from docx import Document
 from warnings import filterwarnings
 
 filterwarnings("ignore")
@@ -26,19 +27,18 @@ def data():
         os.mkdir(path="processed")
         os.mkdir(path="external")
 
-    return child_data()
+    child_data()
+    os.chdir("../")
 
 
 def models():
     parent_dir = "models"
     os.mkdir(path=parent_dir)
-    os.chdir(path=parent_dir)
 
 
 def notebooks():
     parent_dir = "notebooks"
     os.mkdir(path=parent_dir)
-    os.chdir(path=parent_dir)
 
 
 def src():
@@ -52,7 +52,8 @@ def src():
         os.mkdir(path="models")
         os.mkdir(path="visualization")
 
-    return child_src()
+    child_src()
+    os.chdir("../")
 
 
 def reports():
@@ -64,9 +65,12 @@ def reports():
         os.mkdir(path="figures")
         pdf_extension = "pdf"
         report_file = "reports"
-        open(report_file + "." + pdf_extension, "x")
+        docx_filename = report_file + "." + pdf_extension
+        doc = Document()
+        doc.save(docx_filename)
 
-    return child_reports
+    child_reports()
+    os.chdir("../")
 
 
 def get_child_dirs():
