@@ -7,7 +7,6 @@ filterwarnings("ignore")
 
 
 def root():
-    
     projectDirectory = sys.argv[1]
     try:
         os.mkdir(path=projectDirectory)
