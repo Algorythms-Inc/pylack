@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pylack"
-version = "0.0.1"
+version = "0.0.3"
 authors = [
   { name="Algorythms Inc", email="algorythmsinc@gmail.com" },
 ]
