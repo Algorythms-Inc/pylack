@@ -18,9 +18,9 @@ __usage="
 if [ $# -eq 2 ]; then
     if [ "$1" = "startproject" ]; then
         project_name="$2"
-        python_script="./pylack/main.py"  # Specify the path to your Python script
+        python_script="./pylack_/main.py"  # Specify the path to your Python script
         if [ -f "$python_script" ]; then
-            echo "Starting the project '$project_name' using '$python_script'..."
+            echo "Starting the project '$project_name'..."
             python3 "$python_script" "$project_name"
         else
             echo "Error: Python script not found at '$python_script'."
@@ -29,7 +29,6 @@ if [ $# -eq 2 ]; then
         echo "Invalid command: $1. Please use 'startproject' as the first argument."
     fi
 else
-    echo "Usage: $0 <command> <project_name>"
-    echo "Available command: startproject"
+    echo $__usage
 fi
 

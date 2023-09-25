@@ -1,4 +1,4 @@
-from pylack import main
+from pylack_ import main
 
-print('testing main module...')
+print("testing main module...")
 main.root()
