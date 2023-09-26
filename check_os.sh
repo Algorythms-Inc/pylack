@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Function to check the operating system and return true for Linux, false for Windows
 check_os() {
     local os=$(uname -s)
